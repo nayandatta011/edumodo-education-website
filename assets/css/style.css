@@ -101,14 +101,12 @@ a{
 }
 .navbar__logo img{
     width: 60%;
-    padding-left: 10px;
 }
 .nav__items{
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     padding-inline-start: 0;
 }
 .nav__items a{
@@ -142,6 +140,7 @@ a{
 .navbar__btn{
     cursor: pointer;
     font-size: 25px;
+    display: none;
 }
 
 
@@ -469,36 +468,34 @@ a{
 /* Responsive codes  */
 @media screen and (max-width: 991px) {
     .navbar{
-        padding: 15px 10px;
-        position: relative;
         background-color: white;
+    }
+    .navbar__btn{
+        display: block;
     }
     .nav__items{
         display: none;
-    }
-    .navbar__mobile{
-        background-color: white;
         width: 100%;
         text-align: center;
-        padding-bottom: 30px;
-        display: block;
+        flex-direction: column;
+        padding: 10px 0 20px;
+       
+    }
+    .nav__items.show{
+        background-color: white;
+        display: flex;
+         
         position: absolute;
-        top: 70px;
+        top: 80px;
         left: 0;
         z-index: 5;
     }
-
-
-    .navbar__mobile.nav__items a{
+    .nav__items.show a{
         font-size: 20px;
         font-weight: 500;
-        margin-top: 15px;
+        margin-bottom: 10px;
     }
 
-
-    .d-none{
-        display: block;
-    }
     .hero__wrapper{
         min-height: 550px;
         background-size: 100%;
